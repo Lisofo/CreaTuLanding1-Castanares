@@ -8,7 +8,7 @@ function App() {
     <>
       <div>
         <Navbar/>
-        <ItemListContainer greeting="Bienvenido a Dimensional Art" />
+        <ItemListContainer information="Nuevos productos proximamente" />
       </div>
     </>
   )
