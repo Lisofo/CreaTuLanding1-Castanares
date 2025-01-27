@@ -1,0 +1,53 @@
+/* Navbar.css */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 98%;
+  z-index: 1000;
+}
+
+nav .brand {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+nav .categories {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav .categories li {
+  margin: 0 15px;
+  cursor: pointer;
+}
+
+nav .categories li:hover {
+  color: #ffcc00;
+}
+
+.cart-widget {
+  display: flex;
+  align-items: center;
+}
+
+.cart-icon {
+  font-size: 24px;
+}
+
+.notification-bubble {
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+  margin-left: 5px;
+}
