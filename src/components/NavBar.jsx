@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 import CartWidget from './CartWidget';
 import './Navbar.css';
 
-const Navbar = () => {
+const NavBar = () => {
   return (
     <nav>
       <div className="brand">Dimensional Art</div>
@@ -17,4 +17,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default NavBar;

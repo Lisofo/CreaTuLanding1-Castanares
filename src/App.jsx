@@ -1,24 +1,21 @@
 import './App.css';
-import { Router, Routes, Route } from 'react-router';
-import { createBrowserHistory } from 'history';
-import Navbar from './components/Navbar';
+import { BrowserRouter, Routes, Route } from 'react-router';
+import NavBar from './components/NavBar';
 import ItemListContainer from './components/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer';
 
-const history = createBrowserHistory();
-
 function App() {
   return (
-    <Router history={history}> {}
+    <BrowserRouter >
       <div>
-        <Navbar />
+        <NavBar />
         <Routes>
-          <Route path="/" component={ItemListContainer} />
-          <Route path="/category/:id" component={ItemListContainer} />
-          <Route path="/item/:id" component={ItemDetailContainer} />
+          <Route path="/" element={<ItemListContainer/>} />
+          <Route path="/category/:id" element={<ItemListContainer/>} />
+          <Route path="/item/:id" element={<ItemDetailContainer/>} />
         </Routes>
       </div>
-    </Router>
+    </BrowserRouter>
   );
 }
 
