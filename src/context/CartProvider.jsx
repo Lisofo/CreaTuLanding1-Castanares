@@ -5,8 +5,13 @@ function CartProvider({ children }) {
     const [cart, setCart] = useState([]);
 
     const addToCart = (product) => {
+        if (product.quantity <= 0) {
+            console.error("La cantidad debe ser mayor que 0");
+            return;
+        }
+    
         const existingProductIndex = cart.findIndex((item) => item.id === product.id);
-
+    
         if (existingProductIndex !== -1) {
             const updatedCart = [...cart];
             updatedCart[existingProductIndex].quantity += product.quantity;
