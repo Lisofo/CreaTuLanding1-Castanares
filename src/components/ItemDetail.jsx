@@ -1,20 +1,21 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
+import ItemCount from './ItemCount'
+import Image from 'react-bootstrap/Image';
 
-function ItemDetail({ item }) {
+function ItemDetail({ detail }) {
     return (
-        <Card style={{ width: '18rem', margin: 'auto' }}>
-            <Card.Img variant="top" src={item.thumbnail} />
+        <Card style={{ width: '25rem', margin: 'auto' }}>
+            <Image src={detail.image} rounded />
             <Card.Body>
-                <Card.Title>{item.title}</Card.Title>
+                <Card.Title>{detail.title}</Card.Title>
                 <Card.Text>
-                    {item.description}
+                    {detail.description}
                 </Card.Text>
                 <Card.Text>
-                    Precio: ${item.price}
+                    Precio: ${detail.price}
                 </Card.Text>
-                <Button variant="dark">Agregar al carrito</Button>
+                <ItemCount product={detail}/>
             </Card.Body>
         </Card>
     );

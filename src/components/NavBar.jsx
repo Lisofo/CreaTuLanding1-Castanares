@@ -1,20 +1,26 @@
 import React from 'react';
 import { Link } from 'react-router';
 import CartWidget from './CartWidget';
-import './Navbar.css';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import Container from 'react-bootstrap/Container';
 
-const Navbar = () => {
+function NavBar () {
   return (
-    <nav>
-      <div className="brand"><Link to='/'>Dimensional Art</Link></div>
-      <ul className="categories">
-        <li><Link to="/category/smartphones">Smartphones</Link></li>
-        <li><Link to="/category/laptops">Laptops</Link></li>
-        <li><Link to="/category/fragrances">Fragrances</Link></li>
-      </ul>
-      <CartWidget />
-    </nav>
+    <>
+      <Navbar bg='dark' data-bs-theme='dark'>
+        <Container>
+          <Navbar.Brand as={Link} to='/'> Dimensional Art</Navbar.Brand>
+          <Nav className='me-auto'>
+            <Nav.Link as={Link} to="/category/smartphones">Smartphone</Nav.Link>
+            <Nav.Link as={Link} to="/category/laptops">Laptops</Nav.Link>
+            <Nav.Link as={Link} to="/category/fragrances">Fragrances</Nav.Link>
+          </Nav>
+          <CartWidget/>
+        </Container>
+      </Navbar>
+    </>
   );
 };
 
-export default Navbar;
+export default NavBar;
