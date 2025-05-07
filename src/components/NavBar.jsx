@@ -15,6 +15,7 @@ function NavBar () {
             <Nav.Link as={NavLink} to="/category/smartphones">Smartphone</Nav.Link>
             <Nav.Link as={NavLink} to="/category/laptops">Laptops</Nav.Link>
             <Nav.Link as={NavLink} to="/category/fragrances">Fragrances</Nav.Link>
+            <Nav.Link as={NavLink} to="/category/impreciones">Impreciones 3D</Nav.Link>
           </Nav>
           <CartWidget/>
         </Container>
