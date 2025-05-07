@@ -8,11 +8,10 @@ function ItemDetail({ detail }) {
         <Card style={{ width: '25rem', margin: 'auto' }}>
             {/* Reemplazamos la Image simple por el Carousel */}
             {detail.carrusel && detail.carrusel.length > 0 ? (
-                <Carousel style={{height: '21rem'}}>
+                <Carousel>
                     {detail.carrusel.map((imageUrl, index) => (
-                        <Carousel.Item key={index} style={{height: '21rem'}}>
+                        <Carousel.Item key={index}>
                             <img
-                                style={{height: '21rem'}}
                                 className="d-block w-100"
                                 src={imageUrl}
                                 alt={`Slide ${index}`}

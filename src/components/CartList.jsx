@@ -1,6 +1,7 @@
 import ListGroup from "react-bootstrap/ListGroup";
 import CloseButton from "react-bootstrap/CloseButton";
 import Button from "react-bootstrap/Button";
+import Image from "react-bootstrap/Image";
 import { useNavigate } from "react-router";
 import { useContext } from "react";
 import { cartContext } from "../context/CartContext";
@@ -25,10 +26,13 @@ function CartList({ cart }) {
         <div className="w-50 mt-5">
             <ListGroup>
                 {cart.map((prod) => (
-                    <ListGroup.Item key={prod.id} className="d-flex justify-content-between p-3">
-                        {prod.name} x {prod.quantity}
-                        <CloseButton onClick={() => handleRemove(prod.id)} />
-                    </ListGroup.Item>
+                    <ListGroup.Item key={prod.id} className="d-flex align-items-center p-3 gap-3">
+                    <Image src={prod.image} thumbnail style={{ width: '5rem', height: '5rem' }}/>
+                    <div className="flex-grow-1">
+                      {prod.name} x {prod.quantity}
+                    </div>
+                    <CloseButton onClick={() => handleRemove(prod.id)} />
+                  </ListGroup.Item>
                 ))}
             </ListGroup>
             <div className="d-flex flex-column mt-3">
